@@ -3,3 +3,5 @@
 
 terraform.tfstate
 .terraform.lock.hcl
+
+lambda.zip
