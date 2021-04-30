@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 data "archive_file" "lambdazip" {
-  type = "zip"
+  type        = "zip"
   output_path = var.zip_filename
 
   source_dir = "src"
@@ -33,9 +33,9 @@ resource "aws_lambda_function" "discordRedirect" {
   filename = var.zip_filename
 
   function_name = "discordRedirect"
-  description = "redirect function for a discord invite to be used with a vanity url"
+  description   = "redirect function for a discord invite to be used with a vanity url"
 
-  role = aws_iam_role.iam_for_lambda.arn
+  role    = aws_iam_role.iam_for_lambda.arn
   handler = "main.lambda_handler"
 
   source_code_hash = filebase64sha256(var.zip_filename)
@@ -43,7 +43,7 @@ resource "aws_lambda_function" "discordRedirect" {
   runtime = "python3.8"
 
   memory_size = 128
-  timeout = 1
+  timeout     = 1
 
   environment {
     variables = {

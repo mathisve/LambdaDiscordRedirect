@@ -1,9 +1,9 @@
 variable "zip_filename" {
-  type = string
+  type    = string
   default = "lambda.zip"
 }
 
 variable "invite_link" {
-  type = string
+  type    = string
   default = "https://discord.gg/HW7Sb9GEnq"
 }
