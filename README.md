@@ -1,10 +1,3 @@
 # LambdaDiscordRedirect
 
-AWS Lambda that redirects to discord invite to be used with a vanity url.
-
-## Deploy
-
-`terraform init`
-`terraform apply`
-
-then add an API gateway trigger.
+AWS Lambda function that creates a new invite and redirects the user upon visiting the vanity URL.
