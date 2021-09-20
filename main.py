@@ -17,9 +17,9 @@ def create_invite():
     }
 
     payload = {
-        'max_age': 60,
+        'max_age': 360,
         'max_uses': 1,
-        'temporary': True,
+        'temporary': False,
         'unique': True
     }
 
