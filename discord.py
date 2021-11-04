@@ -48,7 +48,7 @@ def create_invite(event):
 
 def send_message(event, code):
     payload = {
-        'content': 'Created Invite: `{}` for IP: `{}`'.format(code, event["requestContext"]["http"]["sourceIp"]),
+        'content': 'Created Invite: `{}` for IP: `{}` User-Agent: `{}`'.format(code, event["requestContext"]["http"]["sourceIp"], event["headers"]["user-agent"]),
     }
 
     r = http.request("POST",
